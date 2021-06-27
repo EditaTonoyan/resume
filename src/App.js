@@ -1,12 +1,13 @@
 import './App.css';
-import{Route,Redirect,Switch} from 'react-router-dom';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import Slider from './components/slider/Slider';
 import BuildResume from './components/resume/BuildResume';
 
+
 const router = [
-  { 
+  {
     path: "/",
-    component : Slider,
+    component: Slider,
     exact: true
   },
   {
@@ -18,25 +19,27 @@ const router = [
 
 function App() {
 
-  const pages = router.map((page,index)=>{
- 
-    return(
+  const pages = router.map((page, index) => {
+
+    return (
       <Route
 
-       key = {index}
-       path={page.path}
-       component = {page.component}
-       exact={page.exact}
-     />
+        key={index}
+        path={page.path}
+        component={page.component}
+        exact={page.exact}
+      />
 
-    ) 
-})
+    )
+  })
   return (
     <div >
-            <Switch>
-               {pages}
-            </Switch>
-      <Slider/>
+      <BrowserRouter>
+        <Switch>
+          {pages}
+        </Switch>
+      </BrowserRouter>
+
     </div>
   );
 }

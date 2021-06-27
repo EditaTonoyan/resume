@@ -1,0 +1,16 @@
+.contentStyle  {
+    height: 160px;
+    color: #fff;
+    line-height: 160px;
+    text-align: center;
+    background: rgba(247, 247, 247, 0.4);
+};
+
+.menu {
+    background-color: rgba(247, 247, 247, 0.9);
+    float: left;
+    width: 100%;
+    height:100%;
+    margin: 16px 24px 16px 0;
+    text-align: center;
+}
